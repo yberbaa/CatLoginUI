@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cat Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrap">
+  <div class="card">
+
+    <!-- Character -->
+    <div class="character" aria-hidden="true" id="char">
+      <svg class="char-svg" viewBox="0 0 260 180">
+        <defs>
+          <!-- GRİ KEDİ KÜRK -->
+          <linearGradient id="furGray" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#f2f4f8"/>
+            <stop offset="1" stop-color="#cfd5df"/>
+          </linearGradient>
+
+          <!-- AÇIK GRİ / KREM YÜZ -->
+          <linearGradient id="creamGray" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#e6e9ef"/>
+          </linearGradient>
+        </defs>
+
+        <!-- HEAD -->
+        <g class="cat-head">
+          <!-- ears -->
+          <path class="ear" d="M78 58 L56 18 L106 42 Z"></path>
+          <path class="ear" d="M182 58 L204 18 L154 42 Z"></path>
+          <path class="ear-inner" d="M78 54 L64 28 L98 43 Z"></path>
+          <path class="ear-inner" d="M182 54 L196 28 L162 43 Z"></path>
+
+          <!-- head (tombul) -->
+          <path class="head" d="M130 30
+            C95 30 67 52 62 84
+            C56 122 86 156 130 156
+            C174 156 204 122 198 84
+            C193 52 165 30 130 30 Z"></path>
+
+          <!-- highlight (ışık) -->
+          <path class="head-hi"
+            d="M88 60
+               C98 46 120 40 138 44
+               C120 52 110 62 100 74
+               C92 82 82 74 88 60 Z"/>
+
+          <!-- muzzle -->
+          <path class="muzzle" d="M130 88
+            C108 88 92 102 92 120
+            C92 140 108 150 130 150
+            C152 150 168 140 168 120
+            C168 102 152 88 130 88 Z"></path>
+
+          <!-- muzzle highlight -->
+          <path class="muzzle-hi"
+            d="M108 102
+               C114 96 126 94 136 96
+               C126 102 120 110 112 114
+               C106 116 104 108 108 102 Z"/>
+
+          <!-- eyes (big + blue) -->
+          <g class="eye-wrap">
+            <!-- left -->
+            <ellipse class="eye-white" cx="104" cy="88" rx="18" ry="16"></ellipse>
+            <ellipse class="iris" cx="104" cy="92" rx="10" ry="11"></ellipse>
+            <circle class="pupil" cx="104" cy="94" r="5.2"></circle>
+            <circle class="shine" cx="108" cy="88" r="3.2"></circle>
+            <circle class="shine2" cx="100" cy="94" r="2.0"></circle>
+
+            <!-- right -->
+            <ellipse class="eye-white" cx="156" cy="88" rx="18" ry="16"></ellipse>
+            <ellipse class="iris" cx="156" cy="92" rx="10" ry="11"></ellipse>
+            <circle class="pupil" cx="156" cy="94" r="5.2"></circle>
+            <circle class="shine" cx="160" cy="88" r="3.2"></circle>
+            <circle class="shine2" cx="152" cy="94" r="2.0"></circle>
+          </g>
+
+          <!-- eyebrows -->
+          <path class="brow" d="M90 72 C98 66 108 66 116 72"></path>
+          <path class="brow" d="M144 72 C152 66 162 66 170 72"></path>
+
+          <!-- blush -->
+          <circle class="blush" cx="86" cy="118" r="8"></circle>
+          <circle class="blush" cx="174" cy="118" r="8"></circle>
+
+          <!-- nose -->
+          <path class="nose" d="M130 114 L124 120 Q130 126 136 120 Z"></path>
+
+          <!-- smile -->
+          <path class="mouth smile"
+            d="M112 126
+               C118 136 142 136 148 126"></path>
+
+          <!-- whiskers -->
+          <path class="whisk" d="M72 122 C90 116 104 116 118 121"></path>
+          <path class="whisk" d="M72 132 C92 130 108 130 122 134"></path>
+          <path class="whisk" d="M188 122 C170 116 156 116 142 121"></path>
+          <path class="whisk" d="M188 132 C168 130 152 130 138 134"></path>
+        </g>
+
+        <!-- HANDS -->
+        <g class="hands">
+          <!-- left hand -->
+          <g class="hand hand-l" id="handL">
+            <path class="arm" d="M86 108
+              C74 112 68 124 68 140
+              L68 154
+              C68 164 76 170 86 170
+              C96 170 104 164 104 154
+              L104 134
+              C104 120 98 110 86 108 Z"></path>
+
+            <path class="paw" d="M62 92
+              C60 82 70 74 84 74
+              C96 74 108 82 106 92
+              C104 104 94 108 84 108
+              C74 108 64 104 62 92 Z"></path>
+
+            <circle class="pad" cx="84" cy="94" r="4.2"></circle>
+            <circle class="pad2" cx="76" cy="90" r="2.3"></circle>
+            <circle class="pad2" cx="92" cy="90" r="2.3"></circle>
+          </g>
+
+          <!-- right hand -->
+          <g class="hand hand-r" id="handR">
+            <path class="arm" d="M174 108
+              C186 112 192 124 192 140
+              L192 154
+              C192 164 184 170 174 170
+              C164 170 156 164 156 154
+              L156 134
+              C156 120 162 110 174 108 Z"></path>
+
+            <path class="paw" d="M154 92
+              C152 82 162 74 176 74
+              C188 74 200 82 198 92
+              C196 104 186 108 176 108
+              C166 108 156 104 154 92 Z"></path>
+
+            <circle class="pad" cx="176" cy="94" r="4.2"></circle>
+            <circle class="pad2" cx="168" cy="90" r="2.3"></circle>
+            <circle class="pad2" cx="184" cy="90" r="2.3"></circle>
+          </g>
+        </g>
+
+        <!-- eyelids -->
+        <g class="lids">
+          <path class="lid" id="lidL" d="M86 88 C94 78 114 78 122 88 C114 98 94 98 86 88 Z"></path>
+          <path class="lid" id="lidR" d="M138 88 C146 78 166 78 174 88 C166 98 146 98 138 88 Z"></path>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Form -->
+    <div class="content">
+      <div class="field">
+        <div class="label">Enter your username</div>
+        <input id="username" type="text" placeholder="Username" autocomplete="username" />
+      </div>
+
+      <div class="field">
+        <div class="label">Enter your password</div>
+        <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+      </div>
+
+      <button class="btn" type="button">LOGIN</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
